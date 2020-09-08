@@ -8,6 +8,6 @@ class SkillstocksSkill(Skill):
     #https://www.marketwatch.com/investing/stock/aapl
 
     @match_regex(r'stocks (\S+)')
-    async def hello(self, message):
+    async def getstock(self, message):
     	baseurl = "https://www.marketwatch.com/investing/stock/"
     	await message.respond(baseurl + str(message.regex.group(1)))
